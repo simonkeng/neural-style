@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+python neural_style.py \
+    --content $1 \
+    --styles $2 \
+    --output $3 \
+    --iterations 800 
+
+

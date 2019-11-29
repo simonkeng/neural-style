@@ -7,6 +7,7 @@ from argparse import ArgumentParser
 from collections import OrderedDict
 
 from PIL import Image
+import imageio
 import numpy as np
 import scipy.misc
 
@@ -271,7 +272,7 @@ def main():
 
 
 def imread(path):
-    img = scipy.misc.imread(path).astype(np.float)
+    img = imageio.imread(path).astype(np.float)
     if len(img.shape) == 2:
         # grayscale
         img = np.dstack((img,img,img))
